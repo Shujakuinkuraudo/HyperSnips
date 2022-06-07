@@ -1,0 +1,3 @@
+snippet mrm "Fraction" iA
+\mathrm
+endsnippet 
