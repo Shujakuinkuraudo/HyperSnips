@@ -811,7 +811,7 @@ snippet not "notation" b
 	$0
 \end{notation}
 endsnippet
-snippet rem "remark" b
+snippet rem "remark" bA
 \begin{remark}[$1]
 	$0
 \end{remark}
