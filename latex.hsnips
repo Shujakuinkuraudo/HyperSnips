@@ -855,3 +855,9 @@ endsnippet
 snippet exp "exp" iAm
 e^{$0}
 endsnippet
+snippet ybf "yellow and bf" 
+\colorbox{yellow}{\textbf{$0}} 
+endsnippet
+snippet sep "seperate" 
+\;\;\;
+endsnippet
