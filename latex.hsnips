@@ -454,15 +454,15 @@ snippet @< "leftangle rightangle" iAm
 endsnippet
 
 snippet ( "auto close ()" iA
-(${1})
+(${1})$0
 endsnippet
 
 snippet { "auto close {}" iA
-{${1}}
+{${1}}$0
 endsnippet
 
 snippet [ "auto close []" iA
-[${1}]
+[${1}]$0
 endsnippet
 
 priority 200
@@ -513,12 +513,12 @@ endsnippet
 
 priority 100
 snippet comma "comma" iAm
-${1:\\alpha}_1,${1:\\alpha}_2,\\cdots,${1:\\alpha}_${2:n}
+${1}_1,${1}_2,\\cdots,${1}_${2:n}
 endsnippet
 
 priority 100
 snippet plus "plus" iAm
-${1:k}_1${2:\\alpha}_1+${1:k}_2${2:\\alpha}_2+\\cdots+${1:k}_${3:n}${2:\\alpha}_${3:n}
+${1}_1+${1}_2+\\cdots+${1}_${3:n}
 endsnippet
 
 snippet `\b([a-z])=n` "i=1,2,\cdots,n" wAm
@@ -848,16 +848,22 @@ snippet voc "vocabulary" b
 \end{vocabulary}
 endsnippet
 snippet chap "chapterImage" b
-\chapterimage{$0} 
+\chapterimage{chapterImage${1}} 
 \chapterspaceabove{6.75cm}
 \chapterspacebelow{7.25cm} 
 endsnippet
 snippet exp "exp" iAm
 e^{$0}
 endsnippet
-snippet ybf "yellow and bf" 
-\colorbox{yellow}{\textbf{$0}} 
+snippet ybf "yellowandbf" wA
+\colorbox{yellow}{\textbf{${1}}}$0 
 endsnippet
-snippet sep "seperate" 
+snippet rm "rm" wA
+\rm{${1}}$0 
+endsnippet
+snippet sep "seperate" A
 \;\;\;
+endsnippet
+snippet ovl "overline" wAm
+\overline{$1}$0
 endsnippet
