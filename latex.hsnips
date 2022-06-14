@@ -796,6 +796,7 @@ snippet pac "Package" b
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
 
+# ==environment==
 snippet def "Definition" b
 \begin{definition}[$1]
 	$0
@@ -837,7 +838,7 @@ snippet exe "exercise" b
 	$0
 \end{exercise}
 endsnippet
-snippet pro "problem" b
+snippet prob "problem" b
 \begin{problem}[$1]
 	$0
 \end{problem}
@@ -855,8 +856,11 @@ endsnippet
 snippet exp "exp" iAm
 e^{$0}
 endsnippet
-snippet ybf "yellowandbf" wA
+snippet yb "yellowandbf" wA
 \colorbox{yellow}{\textbf{${1}}}$0 
+endsnippet
+snippet pb "pinkandbf" wA
+\colorbox{pink}{\textbf{\ref{${1}}}}$0 
 endsnippet
 snippet rm "rm" wA
 \rm{${1}}$0 
@@ -866,4 +870,23 @@ snippet sep "seperate" A
 endsnippet
 snippet ovl "overline" wAm
 \overline{$1}$0
+endsnippet
+# ==logical==
+snippet l+ "logical or" wAm
+\lor $0
+endsnippet
+snippet l* "logical and" wAm
+\land $0
+endsnippet
+snippet l= "logical equal" wAm
+\leftrightarrow $0
+endsnippet
+snippet l! "logical not " wAm
+\lnot $0
+endsnippet
+snippet e= "equaiton equal" wAm
+\Leftrightarrow $0
+endsnippet
+snippet et "equaiton equal" wAm
+\Rightarrow $0
 endsnippet
