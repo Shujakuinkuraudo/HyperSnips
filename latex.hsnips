@@ -1,3 +1,9 @@
+# Custom: Can add more defined operator
+priority 100
+snippet `(?<![\a-zA-Z])(rank|lcm|gcd|dom|ran|fld|Cov)` "math function" wAm
+\\operatorname{``rv = m[1]``}
+endsnippet
+
 global
 function gen_matrix(nrow, ncol, index) {
     let results = "\n";
@@ -134,7 +140,7 @@ endsnippet
 
 priority 10000
 snippet TR "inverse" iAm
-^{\mathsf{T}}
+^{\mathsf{${1:T}}} $0
 endsnippet
 
 snippet CL "complement" wAm
@@ -325,9 +331,6 @@ snippet =< "implied by" iAm
 \impliedby
 endsnippet
 
-snippet iff "if and only if" iAm
-\iff
-endsnippet
 
 snippet EE "exist" iAm
 \exists 
@@ -587,11 +590,6 @@ rv = final;
 ``
 endsnippet
 
-# Custom: Can add more defined operator
-priority 100
-snippet `(?<![\a-zA-Z])(rank|lcm|gcd)` "math function" wAm
-\\operatorname{``rv = m[1]``}
-endsnippet
 
 snippet `(?<![\a-zA-Z])arg(max|min)` "argmin/max" wAm
 \mathop{\arg\\``rv = m[1]``}
@@ -697,7 +695,7 @@ endsnippet
 
 # ==== Dynamic Matrix ====
 
-priority 300
+priority 500
 snippet `(bm|pm|m|vm)at([1-9])([1-9])` "matrix" iwAm
 \begin{``rv = m[1]``atrix}``
     rv = gen_matrix(m[2],m[3],1);
@@ -890,3 +888,20 @@ endsnippet
 snippet et "equaiton equal" wAm
 \Rightarrow $0
 endsnippet
+# ==set==
+snippet s+ "set plus" wAm
+\cup $0
+endsnippet
+snippet s* "set and" wAm 
+\cap $0
+endsnippet
+snippet sn "set noting" wAm
+\varnothing $0
+endsnippet
+snippet sse "subseteq" wAm
+\subseteq $0
+endsnippet
+snippet bd "bold" wA
+\bold{$1} $0
+endsnippet
+
