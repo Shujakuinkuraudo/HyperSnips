@@ -606,17 +606,17 @@ snippet bigdef "Big function" iAm
 \end{equation$6}$0
 endsnippet
 
-snippet bigmin "Optimization problem" iAm
+snippet bigmin "Optimization problem" wA
 \begin{equation$4}
 	\begin{aligned}
 		\min &\quad ${1:f(x)}\\\\
 		\text{s.t.} &\quad ${2:g(x)} \leq 0\\\\
 					&\quad ${3:h(x)} = 0\\\\
 	\end{aligned}
-\end{equaiton$4}$0
+\end{equation$4}$0
 endsnippet
 
-snippet bigmax "Optimization problem" wAm
+snippet bigmax "Optimization problem" wA
 \begin{equation$4}
 	\begin{aligned}
 		\max &\quad ${1:f(x)}\\\\
